@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+input{display: none;}
+
+header{
+    background: #1484c8;
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 2em;
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-weight: 700;
+    font-family: 'Dancing Script', sans-serif;
+}
+
+.btn__menu{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.btn__menu span{
+    display: block;
+    width: 30px;
+    height:4px;
+    background: #fff;
+    margin: 4px;
+    border-radius: 4px;
+    transform-origin: 4px;
+    transition: all 300ms ease-in-out;
+}
+
+#check:checked ~ .btn__menu span:nth-last-child(3){
+    transform: rotate(42deg) translate(2px);
+}
+
+#check:checked ~ .btn__menu span:nth-last-child(2){
+    transform: scale(0);
+    opacity: 0;
+}
+
+#check:checked ~ .btn__menu span:nth-last-child(1){
+    transform: rotate(-40deg) translate(1px);
+}
+
+.menu{
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    height: 100vh;
+    background:  #1484c8;
+    border-top: 1px solid #fff;
+    display: none;
+}
+.menu::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #0b5b99;
+    display: none;
+}
+.menu ul{
+    
+}
+
+.menu ul li {
+    width: 100%;
+    list-style: none;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 1.7em;
+    color: #fff;
+    
+}
+
+.menu ul li:hover{
+    background: #0b5b99;
+    transition: all 500ms ease-in-out;
+}
+
+
+.container__banners{
+    width: 100%;
+    position: relative;
+    top: 85px;
+    overflow: hidden;
+}
+
+.container__banners .banner{
+    background-image: url(../img/mejorar-el-agua-del-grifo.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 320px;
+    position: relative;
+    
+}
+.container__banners .banner:hover{
+
+}
+
+.container__banners .banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.banner .content__banner{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+.banner .content__banner h2{
+    font-size: 3em;
+}
+
+.banner .content__banner p{
+    font-size: 0.9em;
+    margin: 1em;
+    line-height: 2em;
+    padding: 10px;
+}
+
+.banner .content__banner a{
+    text-decoration: none;
+    background: #1484c8;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+
+/*banner 2*/
+
+.container__banners .banner2{
+    background-image: url(../img/horeca-de-culligan.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 320px;
+    position: relative;
+  
+
+}
+
+.container__banners .banner2:hover{
+  
+}
+
+.container__banners .banner2::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.banner2 .content__banner{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+.banner2 .content__banner h2{
+    font-size: 3em;
+}
+
+.banner2 .content__banner p{
+    font-size: 0.9em;
+    margin: 1em;
+    line-height: 2em;
+    padding: 10px;
+}
+
+.banner2 .content__banner a{
+    text-decoration: none;
+    background: #1484c8;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+@media (min-width: 768px){
+    .logo{
+        font-size: 3em;
+        top: 15px;
+    }
+    
+    .container__banners{
+        display: flex;
+    }
+    
+    .container__banners .banner{
+        height: 100vh;
+    }
+     .container__banners .banner2{
+        height: 100vh;
+    }
+    
+    .banner .content__banner{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 25px;
+        top: 25%;
+    }
+     .banner2 .content__banner{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 25px;
+        top: 25%;
+    }
+}
+
+
+@media (min-width: 1024px){
+    .logo{
+        left: 60px;
+    }
+    .btn__menu{
+        display: none;
+    }
+    .menu{
+        display: block;
+        height: auto;
+        border: none;
+        top: 0;
+        right: 10px;
+        width: 60%;
+    }
+    .menu ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85px;
+        
+    }
+    .menu ul li{
+        border: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .menu ul li a{
+        font-size: 1.3em;
+    }
+    .banner .content__banner{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 25px;
+        top: 35%;
+    }
+     .banner2 .content__banner{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 25px;
+        top: 35%;
+    }
+}
+  
+
+
